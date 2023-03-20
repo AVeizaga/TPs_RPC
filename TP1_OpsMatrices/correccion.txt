@@ -1,0 +1,1 @@
+El standard de devolver un entero es para los programas, es decir, la función main. Cuando se trata de una función con un propósito específico se atiende a la lógica intuitiva, devuelve valor si debe hacerlo y si no corresponde, no lo hace.
