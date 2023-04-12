@@ -1,0 +1,11 @@
+- Fijate que en matriz_cargar_archivo cargás las filas y columnas pasando
+por referencia los campos de la matriz pasada como parámetro para luego invocar
+matriz_inicializar con esos valores que vuelven a setear esos valores. Creo que la
+mejor opción era leerlos en dos variables locales para luego invocar la
+inicialización.
+- Personalmente me parecía mejor opción que la función matriz_inicializar tome como
+argumento una matríz por referencia más que devolver una pero es cuestión de gusto.
+- los nombres de los archivos correspondientes a la implementación de las operaciones
+de matrices no coinciden.
+
+Nota: 10.
