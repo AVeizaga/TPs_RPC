@@ -1,7 +1,7 @@
 #include "matrices_func.h"
 
 /*---------------------
-El orden de los parametros es por ejemplo ./a.out matriz1.txt matriz2.txt matriz_salida.txt
+El orden de los parametros es por ejemplo ./a.out matrizA.txt matrizB.txt matriz_salida.txt
 Multiples resultados se pueden escribir en un mismo archivo de salida
 Luego de cada resultado se deberia usar matriz_liberar() para evitar leaks de memoria
 ---------------------*/
