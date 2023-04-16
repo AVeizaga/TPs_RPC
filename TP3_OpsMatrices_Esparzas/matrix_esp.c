@@ -29,7 +29,7 @@ Matrix initialize_matrix(int q_row, int q_cols){
     if(inic_size == 0)
         inic_size = 1;
 
-    matrix.mat = calloc(inic_size, sizeof(Elem));
+    matrix.mat = (Elem*) calloc(inic_size, sizeof(Elem));
     if(matrix.mat == NULL){
         fprintf(stderr, "No se pudo reservar memoria para la matriz.\n");
         exit(-1);
@@ -133,11 +133,11 @@ void set_element(Matrix *matrix, Coordinate c, int val){
         if((matrix->data_size + 1) > (matrix->ph_size)){
             //Reviso que no me paso del maximo tamaño
             if((2 * matrix->ph_size) > (matrix->q_row*matrix->q_cols)){
-                matrix->mat = realloc(matrix->mat, matrix->q_row*matrix->q_cols*sizeof(Elem));
+                matrix->mat = (Elem*) realloc(matrix->mat, matrix->q_row*matrix->q_cols*sizeof(Elem));
                 matrix->ph_size = matrix->q_row*matrix->q_cols;
             }
             else{
-                matrix->mat = realloc(matrix->mat, 2*matrix->ph_size*sizeof(Elem));
+                matrix->mat = (Elem*) realloc(matrix->mat, 2*matrix->ph_size*sizeof(Elem));
                 matrix->ph_size = 2*matrix->ph_size;
             }
 
