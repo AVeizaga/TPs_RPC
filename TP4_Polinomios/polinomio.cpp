@@ -140,6 +140,10 @@ polinomio<T> polinomio<T>::operator*(const polinomio & pol){
         exit(-1);
     }
 
+    for(int i = 0; i < max_grado; i++){
+        temp[i] = 0;
+    }
+
     for(int i = 0; i <= grado; i++){
         for(int j = 0; j <= pol.grado; j++){
             temp[i+j] += coefs[i]*pol.coefs[j];
