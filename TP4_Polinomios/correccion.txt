@@ -1,4 +1,4 @@
 - El ejemplo no parece andar, dice que los valores no corresponden a un intervalo apropiado pero el ejemplo
-parece correcto y el código también.
+parece correcto. Adicionalmente termina con abortando con un Heap corruption.
 
 Nota: revisar
