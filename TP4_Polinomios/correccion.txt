@@ -1,0 +1,4 @@
+- El ejemplo no parece andar, dice que los valores no corresponden a un intervalo apropiado pero el ejemplo
+parece correcto y el código también.
+
+Nota: revisar
