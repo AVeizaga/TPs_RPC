@@ -12,7 +12,7 @@ polinomio<T>::polinomio(unsigned int gra, T *vec){
         grado = 0;
     else
         grado = gra;
-    coefs = new T[grado];
+    coefs = new T[grado + 1];
     if(coefs == NULL){
         cerr << "No se pudo reservar memoria." << endl;
         exit(-1);
@@ -36,7 +36,7 @@ polinomio<T>::polinomio(){
 template <class T>
 polinomio<T>::polinomio(const polinomio & pol){
     grado = pol.grado;
-    coefs = new T[grado];
+    coefs = new T[grado + 1];
     if(coefs == NULL){
         cerr << "No se pudo reservar memoria." << endl;
         exit(-1);
@@ -75,7 +75,7 @@ polinomio<T> polinomio<T>::operator+(const polinomio & pol){
     grado_sum  = (grado > pol.grado) ? grado : pol.grado;
     grado_min = (grado > pol.grado) ? pol.grado : grado;
 
-    temp = new T[grado_sum];
+    temp = new T[grado_sum + 1];
     if(temp == NULL){
         cerr << "No se pudo reservar memoria." << endl;
         exit(-1);
@@ -106,7 +106,7 @@ polinomio<T> polinomio<T>::operator-(const polinomio & pol){
     grado_sum  = (grado > pol.grado) ? grado : pol.grado;
     grado_min = (grado > pol.grado) ? pol.grado : grado;
 
-    temp = new T[grado_sum];
+    temp = new T[grado_sum + 1];
     if(temp == NULL){
         cerr << "No se pudo reservar memoria." << endl;
         exit(-1);
@@ -313,7 +313,7 @@ template <class Q>
 istream & operator>>(istream & in, polinomio<Q> & pol){
     delete[] pol.coefs;
     in >> pol.grado;
-    pol.coefs = new Q[pol.grado];
+    pol.coefs = new Q[pol.grado + 1];
     if(pol.coefs == NULL){
         cerr << "No se pudo reservar memoria." << endl;
         exit(-1);
