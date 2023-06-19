@@ -1,3 +1,9 @@
+///g++ main.cpp spline.cpp -lginac -lcln
+///El ejemplo guarda en salida.txt 100 puntos usando los splines entre 
+///-10 y 10 separado en 40 polinomios.
+///Se pueden graficar estos puntos, con el script g_test.py
+
+
 #include <iostream>
 #include <fstream>
 #include <string>

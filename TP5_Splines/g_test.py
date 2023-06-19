@@ -1,3 +1,5 @@
+#Script sencillo para graficar el resultado de las splines.
+
 import numpy as np
 import matplotlib.pyplot as plt
 
