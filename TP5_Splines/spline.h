@@ -26,6 +26,7 @@ private:
     //Generar los splines
     void generate();
 public:
+    //Constructores
     spline(const symbol &x, const ex func);
     spline(const symbol &x, const ex func, double lim_inf, double lim_sup, unsigned int n);
     spline(const symbol &x, const string func);
