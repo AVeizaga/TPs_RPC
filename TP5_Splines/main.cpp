@@ -37,5 +37,7 @@ int main(int argc, char* argv[]){
     cout << sp1(2.5) << "\n";
     cout << "sin(2.5) = 0.5984721441039564" << endl;
 
+    out.close();
+
     return 0;
 }

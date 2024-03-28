@@ -24,13 +24,14 @@ polinomio<T>::polinomio(unsigned int gra, T *vec){
 
 template <class T>
 polinomio<T>::polinomio(){
-    grado = 0;
-    coefs = new T[1];
+    grado = 1;
+    coefs = new T[2];
     if(coefs == NULL){
         cerr << "No se pudo reservar memoria." << endl;
         exit(-1);
     }
-    coefs = 0;
+    coefs[0] = 0;
+    coefs[1] = 0;
 }
 
 template <class T>
@@ -140,7 +141,7 @@ polinomio<T> polinomio<T>::operator*(const polinomio & pol){
         exit(-1);
     }
 
-    for(int i = 0; i < max_grado; i++){
+    for(int i = 0; i <= max_grado; i++){
         temp[i] = 0;
     }
 
@@ -416,16 +417,16 @@ void polinomio<T>::factorizar(){
 //int_a1 int_a2
 //int_b1 int b2
 //etc
-//No pude dejar la funcion como quería, por ahora solo imprime los valores
+//No pude dejar la funcion como quería, por ahora solo imprime los valores y solo acepta floats
 template <class T>
 void polinomio<T>::factorizar(string filename){
     ifstream in;
     in.open(filename);
 
     int cant;
+    int max_iters;
     float err;
-    float max_iters;
-    float a,b;
+    float a, b;
     polinomio resto = *this;
 
     in >> cant;
@@ -447,4 +448,6 @@ void polinomio<T>::factorizar(string filename){
     }
 
     cout << resto << endl;
+
+    in.close();
 }

@@ -170,7 +170,7 @@ int spline::len(){
 /// @param cant_p Cantidad de puntos a guardar
 void spline::save(ostream & out, unsigned int cant_p){
     for(int i = 0; i < cant_p; i++){
-        out << lim_inf + i*(lim_sup - lim_inf)/cant_p << "\n";
-        out << (*this)(lim_inf + i*(lim_sup - lim_inf)/cant_p) << "\n";
+        out << lim_inf + i*(lim_sup - lim_inf)/cant_p << ", ";
+        out << (*this)(lim_inf + i*(lim_sup - lim_inf)/cant_p) << endl;
     }
 }

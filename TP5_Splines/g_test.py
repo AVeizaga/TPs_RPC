@@ -3,27 +3,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+import sys
+
+if(len(sys.argv) > 1):
+    file_name = sys.argv[1]
+else:
+    file_name = "salida.txt"
+
 #Ejes para el grafico
 x = []
 y = []
 
-#Archivo
-f = open('salida.txt', 'r')
 
 #Recorrido del archivo
-count = 0
-for line in f:
-    if(count%2 == 0):
-        x.append(float(line))
-    else:
-        y.append(float(line))
-    count = count + 1
-
-#print(x)
-#print(y)
+with open(file_name, 'r') as file:
+    for line in file:
+        val = line.strip().split(',')
+        x.append(float(val[0]))
+        y.append(float(val[1]))
 
 
 #Grafico
-plt.figure()
 plt.plot(x, y)
-plt.show()
+plt.savefig('grafico.png')
